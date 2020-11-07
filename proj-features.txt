@@ -1,0 +1,36 @@
+registration - 
+book rooms
+	name of guest
+	date of arrival
+	date of departure
+	total price
+room search
+	rooms available
+	room list
+modify room
+	modify room type (already booked),
+	if they want to change rooms in the last minute
+modify amenity
+	inclusions in the room
+	  gym access
+	  pool access
+admin view ***im not sure
+	
+waitlist search
+	view the current list 
+	search the guests that are in the list
+	filter through it (name, date, room type)
+reservation for waitlist
+	like registration page but just for waitlist
+add, remove from the waitlist
+	
+payment system
+	
+reserve/deposit
+
+room payment
+
+generate receipts
+
+log out
+	
