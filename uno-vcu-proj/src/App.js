@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect} from "react-rou
 //pages
 
 // import MainPage from "./components/MainPage/MainPage"; //Rayyan's page should be main
-// import NotFoundPage from "./components/404/404"
+import NotFoundPage from "./components/404Page-FEATURE-kzi-30/404Page-FEATURE-kzi-30"
 import Login from "./Components/Login-FEATURE-kzi-30/Login-FEATURE-kzi-30"
 
 
@@ -17,7 +17,7 @@ class App extends React.Component {
     return <Router>
       <Switch>
         {/* add pages here */}
-      {/* <Route exact path="/" component={Login}/> */}
+      {/* <Route exact path="/" component={MainPage}/> */}
       <Route exact path="/Login" component={Login}/>
 
       {/* just error pages */}
