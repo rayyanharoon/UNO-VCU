@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 let data = {
   accounts : [
@@ -76,6 +77,8 @@ class Login extends React.Component {
         Remember me: <input type="checkbox"/> <br/>
         <button type="submit" onClick={this.loginAccount}>Login</button> <br/>
         <a href="#">Forgot password?</a>
+        <br/>
+        <Link to="/Register"><button type="button">Register</button></Link>
 
 
 
