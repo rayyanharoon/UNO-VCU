@@ -1,6 +1,4 @@
-<<<<<<< HEAD
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import { BrowserRouter as Router, Route, Switch, Link, Redirect} from "react-router-dom";
@@ -10,6 +8,7 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect} from "react-rou
 // import MainPage from "./components/MainPage/MainPage"; //Rayyan's page should be main
 // import NotFoundPage from "./components/404/404"
 import Login from "./Components/Login-FEATURE-kzi-30/Login-FEATURE-kzi-30"
+import Registration from "./Components/Registration-FEATURE-nta-52/Registration-FEATURE-nta-52";
 
 
 
@@ -20,6 +19,7 @@ class App extends React.Component {
         {/* add pages here */}
       {/* <Route exact path="/" component={Login}/> */}
       <Route exact path="/Login" component={Login}/>
+      <Route exact path="/Registration" Component={Registration}/>
 
       {/* just error pages */}
       <Route path="/404" component={NotFoundPage}/>
@@ -31,7 +31,3 @@ class App extends React.Component {
 
 
 export default App;
-=======
-
-
->>>>>>> a7a72cead88b64a26bcef3f1d6ea62f5d60c5d34
