@@ -1,11 +1,12 @@
 import React from 'react';
-import './App.css';
+import ReactDOM from 'react-router-dom';
+//import './App.css';
 
-import Registration from './Components/Registration/Registration';
+//import Registration from './Components/Registration-FEATURE-nta-52/Registration-FEATURE-nta-52';
 
 var data={loginMsg: "You have successfully registered!"}
 
-class Register extends React.Component {
+class Registration extends React.Component {
   constructor(props) {
     super(props);
 
@@ -34,8 +35,6 @@ class Register extends React.Component {
     }
   }
 
-
-
   render() {
     return (
       <div className='App'>
@@ -51,4 +50,4 @@ class Register extends React.Component {
     );
   }
 }
-export default Register;
+export default Registration;
