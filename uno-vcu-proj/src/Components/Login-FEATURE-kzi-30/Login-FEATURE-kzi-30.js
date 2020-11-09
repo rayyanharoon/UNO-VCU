@@ -70,7 +70,7 @@ class Login extends React.Component {
   }
   render() {
     return (
-      <div className='Login'>
+      <div>
         <h1>myVCU</h1>
         Email: <input type="text" onChange={this.updateEmail}/> <br/>
         Password: <input type="password" onChange={this.updatePassword}/> <br/>
