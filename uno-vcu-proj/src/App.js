@@ -20,6 +20,8 @@ class App extends React.Component {
       {/* <Route exact path="/" component={MainPage}/> */}
       <Route exact path="/Login" component={Login}/>
 
+      <Route exact path="/Registration" Component={Registration}/>
+      <Route exact path="/ModifyRoom" Component={ModifyRoom}/>
 
       {/* just error pages */}
       <Route path="/404" component={NotFoundPage}/>
