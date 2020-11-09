@@ -23,6 +23,9 @@ class App extends React.Component {
       <Route exact path="/ModifyRoom" Component={ModifyRoom}/>
 
 
+      <Route exact path="/Registration" Component={Registration}/>
+      <Route exact path="/ModifyRoom" Component={ModifyRoom}/>
+
       {/* just error pages */}
       <Route path="/404" component={NotFoundPage}/>
       {/* <Redirect to="/404"/> */}
