@@ -69,13 +69,15 @@ class Login extends React.Component {
   }
   render() {
     return (
-      <div className='Login'>
+      <div>
         <h1>myVCU</h1>
         Email: <input type="text" onChange={this.updateEmail}/> <br/>
         Password: <input type="password" onChange={this.updatePassword}/> <br/>
         Remember me: <input type="checkbox"/> <br/>
         <button type="submit" onClick={this.loginAccount}>Login</button> <br/>
         <a href="#">Forgot password?</a>
+        <br/>
+        <Link to="/Register"><button type="button">Register</button></Link>
 
 
 
