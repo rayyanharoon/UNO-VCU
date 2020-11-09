@@ -23,7 +23,7 @@ class App extends React.Component {
 
       {/* just error pages */}
       <Route path="/404" component={NotFoundPage}/>
-      <Redirect to="/404"/>
+      {/* <Redirect to="/404"/> */}
       </Switch>
     </Router>
   }
