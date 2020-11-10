@@ -6,10 +6,10 @@ import { BrowserRouter as Router, Route, Switch, Link, Redirect} from "react-rou
 //pages
 
 // import MainPage from "./components/MainPage/MainPage"; //Rayyan's page should be main
-import NotFoundPage from "./Components/404Page-FEATURE-kzi-30/404Page-FEATURE-kzi-30"
-import Login from "./Components/Login-FEATURE-kzi-30/Login-FEATURE-kzi-30"
-import Register from "./Components/Registration-FEATURE-nta-52/Registration-FEATURE-nta-52";
-import ModifyRoom from "./Components/ModifyRoom-FEATURE-kzi-30/ModifyRoom-FEATURE-kzi-30";
+import NotFoundPage from "./component/404Page-FEATURE-kzi-30/404Page-FEATURE-kzi-30"
+import Login from "./component/Login-FEATURE-kzi-30/Login-FEATURE-kzi-30"
+import Register from "./component/Registration-FEATURE-nta-52/Registration-FEATURE-nta-52";
+import ModifyRoom from "./component/ModifyRoom-FEATURE-kzi-30/ModifyRoom-FEATURE-kzi-30";
 
 
 class App extends React.Component {
