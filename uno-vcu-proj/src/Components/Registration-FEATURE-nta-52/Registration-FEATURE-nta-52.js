@@ -1,12 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-router-dom';
+import React, {Component} from 'react';
+import ReactDOM, {Route} from 'react-router-dom';
 //import './App.css';
 
-//import Registration from './Components/Registration-FEATURE-nta-52/Registration-FEATURE-nta-52';
 
 var data={loginMsg: "You have successfully registered!"}
 
-class Registration extends React.Component {
+class Register extends Component {
   constructor(props) {
     super(props);
 
@@ -45,9 +44,9 @@ class Registration extends React.Component {
         Password: <input type='text'/><br/>
         Confirm Password: <input type='text'/><br/>
         <button type="submit" onClick={this.registerData}>Register</button>
-        <Registration loginMsg={data.loginMsg}/>
+       
       </div>
     );
   }
 }
-export default Registration;
+export default Register;
