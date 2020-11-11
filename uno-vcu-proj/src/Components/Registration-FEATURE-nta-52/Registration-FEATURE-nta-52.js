@@ -3,7 +3,7 @@ import ReactDOM, {Route} from 'react-router-dom';
 //import './App.css';
 
 
-var data={loginMsg: "You have successfully registered!"}
+var registerMsg = "You have successfully registered!"
 
 class Register extends Component {
   constructor(props) {
@@ -30,20 +30,85 @@ class Register extends Component {
         Email: "hooverAuthor@gmail.com",
         Password: "Author:MaybeSomeday",
         ConfirmPassword: ""
-      }]
+      }], 
+      addRegistration: {
+        Firstname: "new fname",
+        Lastname: "new lname",
+        Email: "new email",
+        Password: "new password",
+        ConfirmPassword: "new cpassword"
+      }
     }
+
+    this.registerfname = this.registerfname.bind(this)
+    this.registerlname = this.registerlname.bind(this)
+    this.registeremail = this.registeremail.bind(this)
+    this.registerpassword = this.registerpassword.bind(this)
+    this.regconfirmpassword = this.regconfirmpassword.bind(this)
+
   }
+
+  registerfname(e) {
+    this.setState({
+      addRegistration: {
+        ...this.state.addRegistration,
+        Firstname: e.target.value
+      }
+    })
+  }
+
+  registerlname(e) {
+    this.setState({
+      addRegistration: {
+        ...this.state.addRegistration,
+        Lastname: e.target.value
+      }
+    })
+  }
+
+  registeremail(e) {
+    this.setState({
+      addRegistration: {
+        ...this.state.addRegistration,
+        Email: e.target.value
+      }
+    })
+  }
+
+  registerpassword(e) {
+    this.setState({
+      addRegistration: {
+        ...this.state.addRegistration,
+        Password: e.target.value
+      }
+    })
+  }
+
+  regconfirmpassword(e) {
+    this.setState({
+      addRegistration: {
+        ...this.state.addRegistration,
+        ConfirmPassword: e.target.value
+      }
+    })
+  }
+
+  registerData() {
+    console.log(registerMsg)
+  }
+
 
   render() {
     return (
       <div className='App'>
         <h1>Welcome to the Registration</h1>
-        First Name: <input type='text'/><br/>
-        Last Name: <input type='text'/><br/>
-        Email: <input type='text'/><br/>
-        Password: <input type='text'/><br/>
-        Confirm Password: <input type='text'/><br/>
+        First Name: <input type='text' onChange={this.registerfname}/><br/>
+        Last Name: <input type='text' onChange={this.registerlname}/><br/>
+        Email: <input type='text' onChange={this.registeremail}/><br/>
+        Password: <input type='password' onChange={this.registerpassword}/><br/>
+        Confirm Password: <input type='password' onChange={this.regconfirmpassword}/><br/>
         <button type="submit" onClick={this.registerData}>Register</button>
+
        
       </div>
     );
