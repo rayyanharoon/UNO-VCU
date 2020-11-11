@@ -19,9 +19,9 @@ class App extends React.Component {
       <Switch>
         {/* add pages here */}
       {/* <Route exact path="/" component={MainPage}/> */}
-      <Route exact path="/Login" component={Login}/>
-      <Route exact path="/Registration" component={Register}/>
-      <Route exact path="/ModifyRoom" component={ModifyRoom}/>
+      <Route exact path="/Login-kzi-30" component={Login}/>
+      <Route exact path="/Registration-nta-52" component={Register}/>
+      <Route exact path="/ModifyRoom-kzi-30" component={ModifyRoom}/>
 
 
       {/* just error pages */}
