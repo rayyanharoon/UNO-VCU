@@ -45,6 +45,7 @@ class Register extends Component {
     this.registeremail = this.registeremail.bind(this)
     this.registerpassword = this.registerpassword.bind(this)
     this.regconfirmpassword = this.regconfirmpassword.bind(this)
+    this.registerData = this.registerData.bind(this)
 
   }
 
