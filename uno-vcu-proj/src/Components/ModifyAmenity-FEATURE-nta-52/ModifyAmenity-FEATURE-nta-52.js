@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import ReactDOM, {Route} from 'react-router-dom';
 
+
 class ModifyAmenity extends Component {
     constructor(props) {
         super(props);
@@ -15,15 +16,35 @@ class ModifyAmenity extends Component {
         .then(data => this.setState({"data": data}))
     }
 
-    
+    addAmenity = () => {
+        console.log("Added Amenity!");
+        //var addRmNum = document.getElementById('rmnum').value;
+        //var addRmType = document.getElementById('rmtype').value;
+        var addAmenityType = document.getElementById('amenity').value;
+        fetch('http://localhost:8000', 
+        {method: "POST", headers: {"Content-Type": "application/json"}, body: addAmenityType
+    })
+    .then(response => response.json)
+    .then(data => this.setState({"data": data}))
+}
+    updateAmenity = () => {
+        console.log("Updated Amenity!");
+        var updateAmenityType = document.getElementById('amenity').value;
+        fetch("http://localhost:8000", 
+        {method: "PUT", headers: {'Content-type':'application/json'}, 
+        body: updateAmenityType
+    })
+    .then(response => response.json)
+    .then(data => this.setState({"data": data}));
+}
 
     render(){
         return (
             <div className='App'>
             <h1>Modify Amenity</h1>
-            Room Number: <input type='text' onChange={this.showrmnumber}/><br/>
-            Room type: <input type='text' onChange={this.showrmtype}/><br/>
-            Amenity: <select onChange={this.updateAmenity}>
+            Room Number: <input type='text' id='rmnum' onChange={this.showrmnumber}/><br/>
+            Room type: <input type='text' id='rmtype' onChange={this.showrmtype}/><br/>
+            Amenity: <select onChange={this.updateAmenity} id='amenity'>
                 <option value="none">None</option>
                 <option value="pool access">Pool Access</option>
                 <option value="gym access">Gym Access</option>
@@ -41,16 +62,5 @@ class ModifyAmenity extends Component {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
 
 export default ModifyAmenity;
