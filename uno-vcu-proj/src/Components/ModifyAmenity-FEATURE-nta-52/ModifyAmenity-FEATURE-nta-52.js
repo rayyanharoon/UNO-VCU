@@ -7,6 +7,16 @@ class ModifyAmenity extends Component {
         this.state = {};
     }
 
+    getAmenity = () => {
+        console.log("Get Amenity called!");
+        fetch("http://localhost:8000", 
+        {method: "GET"})
+        .then(response => response.json())
+        .then(data => this.setState({"data": data}))
+    }
+
+    
+
     render(){
         return (
             <div className='App'>
@@ -20,7 +30,6 @@ class ModifyAmenity extends Component {
                 <option value="laundry room access">Laundry Room Access</option>
                 <option value="all inclusions">All Inclusions</option>
                     </select><br/>
-            
 
             <button type="submit" onClick={this.getAmenity}>Get Room</button>
             <button type="submit" onClick={this.addAmenity}>Add Amenity</button>
