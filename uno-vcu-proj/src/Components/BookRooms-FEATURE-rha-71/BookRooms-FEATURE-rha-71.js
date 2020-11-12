@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 class BookRooms extends React.Component {
     constructor(props){
@@ -9,7 +9,7 @@ class BookRooms extends React.Component {
 
     getRooms = () => {
         console.log("Get Rooms called");
-        fetch('http://localhost:8000/BookRooms', {method: 'GET'})
+        fetch('http://localhost:8000/', {method: 'GET'})
         .then(response => response.json())
         .then(data => this.setState({"data" : data}))
     }
