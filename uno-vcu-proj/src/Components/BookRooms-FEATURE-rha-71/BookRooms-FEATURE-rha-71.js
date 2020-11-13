@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 
 class BookRooms extends React.Component {
     constructor(props){
@@ -9,7 +9,7 @@ class BookRooms extends React.Component {
 
     getRooms = () => {
         console.log("Get Rooms called");
-        fetch('http://localhost:8000/BookRooms', {method: 'GET'})
+        fetch('http://localhost:8000/', {method: 'GET'})
         .then(response => response.json())
         .then(data => this.setState({"data" : data}))
     }
@@ -46,9 +46,8 @@ class BookRooms extends React.Component {
                     <option value="1 spot available">1 Spot Available</option>
                     <option value="2 spots available">2 Spots Available</option>
                 </select>
-                <br>
+                <br></br>
                 <button onClick={this.addRoom}>Apply For Room</button>
-                </br>
             </div>
         )
     }    
