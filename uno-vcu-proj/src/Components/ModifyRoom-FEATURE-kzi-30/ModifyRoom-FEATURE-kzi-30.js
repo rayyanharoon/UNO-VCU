@@ -12,7 +12,7 @@ class ModifyRoom extends React.Component {
 
     getRooms = () => {
         console.log("Get Rooms called");
-        fetch('http://localhost:8000/ModifyRoom', {method: 'GET'})
+        fetch('http://localhost:8000/modifyroom-kzi-30', {method: 'GET'})
         .then(response => response.json())
         .then(data => this.setState({"data" : data}))
     }
@@ -23,7 +23,7 @@ class ModifyRoom extends React.Component {
         var newType = document.getElementById("typeInput").value;
         var newMaxCapacity = document.getElementById("maxCapacityInput").value;
         var newStatus = document.getElementById("statusInput").value;
-        fetch('http://localhost:8000/ModifyRoom',
+        fetch('http://localhost:8000/modifyroom-kzi-30',
         {
             method:'POST',
             headers:{'Content-type':'Application/json'},
@@ -41,7 +41,7 @@ class ModifyRoom extends React.Component {
     deleteRoom = () => {
         console.log("Delete Room called");
         var idToDelete = document.getElementById("idInput").value
-        fetch('http://localhost:8000/ModifyRoom',{
+        fetch('http://localhost:8000/modifyroom-kzi-30',{
             method: 'DELETE',
             headers: {'Content-Type':'Application/json'},
             body:JSON.stringify({
@@ -59,7 +59,7 @@ class ModifyRoom extends React.Component {
         var newMaxCapacity = document.getElementById("maxCapacityInput").value;
         var newStatus = document.getElementById("statusInput").value;
 
-        fetch('http://localhost:8000/ModifyRoom', {
+        fetch('http://localhost:8000/modifyroom-kzi-30', {
             method: 'PUT',
             headers: {'Content-type' : 'application/json'},
             body: JSON.stringify({
