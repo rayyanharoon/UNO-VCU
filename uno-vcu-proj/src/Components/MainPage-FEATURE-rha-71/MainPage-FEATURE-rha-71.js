@@ -13,9 +13,9 @@ class MainPage extends React.Component {
     editSearchTerm = (e) => {
         this.setState({searchTerm: e.target.value})
     }
-    dynamicSearch = () => {
-        return this.state.names.filter(name => name.toLowerCase().includes(this.state.searchTerm.toLowerCase()));
-    }
+    // dynamicSearch = () => {
+    //     return this.state.names.filter(name => name.toLowerCase().includes(this.state.searchTerm.toLowerCase()));
+    // }
 
     render() {
         return (
@@ -23,27 +23,10 @@ class MainPage extends React.Component {
                 <input type='text' value = {this.state.searchTerm} onChange = {this.editSearchTerm} placeholder='Search for a room type!'/>
                 <br></br>
                 <h3>Here is a list of the room types</h3>
-                <NamesContainer names={this.dynamicSearch()}/>
+                {/* <NamesContainer names={this.dynamicSearch()}/> */}
             </div>
         );
     }
 }
-class NamesContainer extends Component {
-    render() {
-        return (
-            <div>
-                {this.props.names.map(name => <Name name = {name}/>)}
-            </div>
-        )
-    }
-}
-class Name extends Component {
-    render() {
-        return (
-            <div>{this.props.name}
-            <NamesContainer names={this.dynamicSearch()}/>
-            </div>
-        )
-    }
-}
+
 export default MainPage;

@@ -46,9 +46,8 @@ class BookRooms extends React.Component {
                     <option value="1 spot available">1 Spot Available</option>
                     <option value="2 spots available">2 Spots Available</option>
                 </select>
-                <br>
+                <br></br>
                 <button onClick={this.addRoom}>Apply For Room</button>
-                </br>
             </div>
         )
     }    
