@@ -1,6 +1,6 @@
 import React from 'react';
 import { Component } from 'react';
-import NamesContainer from './NamesContainer';
+import NamesContainer from './NamesContainer-FEATURE-rha-71';
 
 
 class MainPage extends React.Component {
