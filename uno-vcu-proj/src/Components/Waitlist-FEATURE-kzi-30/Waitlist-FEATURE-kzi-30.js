@@ -30,21 +30,37 @@ class WaitList extends React.Component {
     }
     render(){
         return(
-        <div className="App">
+            <div className="App">
             <h1>Sign up for the Waitlist!</h1>
             <br/>
-            Full Name: <input type="text" id="nameInput"/><br/>
-            Email: <input type="text" id="emailInput"/><br/>
-            Phone Number: <input type="text" id="phoneInput"/><br/>
-            Address: <input type="text" id="addressInput"/>
-            <br/>
-            <button onClick={this.signUp}>Submit</button>
-            <br/>
-            <Link to="/MainPage"><button type="button">Go to Main</button></Link>
-
-
-
-        </div>
+            {/* name */}
+           <div class="input-group mb-3">
+           <div class="input-group-prepend">
+               <span class="input-group-text" id="basic-addon1">Full Name</span>
+           </div>
+           <input type="text" class="form-control" placeholder="Shellissa Joice" aria-label="fullname" aria-describedby="basic-addon1"   id="nameInput" />
+           </div>
+           {/* email */}
+           <div class="input-group mb-3">
+           <div class="input-group-prepend">
+               <span class="input-group-text" id="basic-addon2">Email</span>
+           </div>
+           <input type="text" class="form-control" placeholder="sjoi@vcu.ca" aria-label="email" aria-describedby="basic-addon2"  id="emailInput"/>
+           </div>
+           {/* phone */}
+           <div class="input-group mb-3">
+           <div class="input-group-prepend">
+               <span class="input-group-text" id="basic-addon3">Phone</span>
+           </div>
+           <input type="text" class="form-control" placeholder="1234567890" aria-label="phoneNum" aria-describedby="basic-addon3"  id="phoneInput"/>
+           </div>
+           <div class="input-group mb-3">
+           <div class="input-group-prepend">
+               <span class="input-group-text" id="basic-addon4">Address</span>
+           </div>
+           <input type="text" class="form-control" placeholder="Username" aria-label="21st Street" aria-describedby="basic-addon4"   id="addressInput"/>
+           </div>
+           </div>
 )
     }
 }
