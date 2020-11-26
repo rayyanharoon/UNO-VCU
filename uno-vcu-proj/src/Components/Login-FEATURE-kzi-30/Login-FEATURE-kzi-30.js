@@ -30,7 +30,7 @@ class Login extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="App">
         <h1>myVCU</h1>
         Email: <input type="text" id="emailInput"/> <br/>
         Password: <input type="password" id="passwordInput"/> <br/>
