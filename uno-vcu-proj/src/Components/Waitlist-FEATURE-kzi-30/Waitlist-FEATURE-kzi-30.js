@@ -60,6 +60,7 @@ class WaitList extends React.Component {
            </div>
            <input type="text" class="form-control" placeholder="Username" aria-label="21st Street" aria-describedby="basic-addon4"   id="addressInput"/>
            </div>
+           <button type="button" class="btn btn-info"onClick={this.signUp}>Submit</button>
            </div>
 )
     }
