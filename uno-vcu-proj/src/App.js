@@ -13,6 +13,7 @@ import BookRooms from "./Components/BookRooms-FEATURE-rha-71/BookRooms-FEATURE-r
 import ModifyRoom from "./Components/ModifyRoom-FEATURE-kzi-30/ModifyRoom-FEATURE-kzi-30";
 import ModifyAmenity from "./Components/ModifyAmenity-FEATURE-nta-52/ModifyAmenity-FEATURE-nta-52"
 import WaitList from './Components/Waitlist-FEATURE-kzi-30/Waitlist-FEATURE-kzi-30';
+import AdminView from "./Components/AdminView-FEATURE-rha-71/AdminView-FEATURE-rha-71";
 
 
 class App extends React.Component {
@@ -28,6 +29,7 @@ class App extends React.Component {
       <Route exact path="/ModifyAmenity-nta-52" component={ModifyAmenity}/>
       <Route exact path="/BookRooms-rha-71" component={BookRooms}/>
       <Route exact path="/Waitlist-kzi-30" component={WaitList}/>
+      <Route exact path="/AdminView-rha-71" component={AdminView}/>
 
 
       {/* just error pages */}
