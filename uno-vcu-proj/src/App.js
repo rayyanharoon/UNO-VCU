@@ -12,6 +12,7 @@ import Register from "./Components/Registration-FEATURE-nta-52/Registration-FEAT
 import BookRooms from "./Components/BookRooms-FEATURE-rha-71/BookRooms-FEATURE-rha-71"
 import ModifyRoom from "./Components/ModifyRoom-FEATURE-kzi-30/ModifyRoom-FEATURE-kzi-30";
 import ModifyAmenity from "./Components/ModifyAmenity-FEATURE-nta-52/ModifyAmenity-FEATURE-nta-52"
+import WaitList from './Components/Waitlist-FEATURE-kzi-30/Waitlist-FEATURE-kzi-30';
 
 
 class App extends React.Component {
@@ -26,7 +27,7 @@ class App extends React.Component {
       <Route exact path="/ModifyRoom-kzi-30" component={ModifyRoom}/>
       <Route exact path="/ModifyAmenity-nta-52" component={ModifyAmenity}/>
       <Route exact path="/BookRooms-rha-71" component={BookRooms}/>
-
+      <Route exact path="/Waitlist-kzi-30" component={WaitList}/>
 
 
       {/* just error pages */}
