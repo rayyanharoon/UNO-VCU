@@ -15,16 +15,16 @@ function NavBar() {
                     <Link className="nav-link" to="/MainPage">Main Page</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/Login-FEATURE-kzi-30">Login</Link>
+                    <Link className="nav-link" to="/Login-kzi-30">Login</Link>
                     </li>
                     <li className="nav-item">
                     <Link className="nav-link" to="/Register">Register</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/ModifyRoom-FEATURE-kzi-30">Modify Room</Link>
+                    <Link className="nav-link" to="/ModifyRoom-kzi-30">Modify Room</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/WaitList-FEATURE-kzi-30">Waitlist</Link>
+                    <Link className="nav-link" to="/WaitList-kzi-30">Waitlist</Link>
                     </li>
                 </ul>
             </div>
