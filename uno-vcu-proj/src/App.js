@@ -27,10 +27,6 @@ class App extends React.Component {
       <Route exact path="/ModifyAmenity-nta-52" component={ModifyAmenity}/>
       <Route exact path="/BookRooms-rha-71" component={BookRooms}/>
 
-      <Route exact path="/" component={MainPage}/>
-      <Route exact path="/Login" component={Login}/>
-      <Route exact path="/Registration" Component={Registration}/>
-      <Route exact path="/ModifyRoom" Component={ModifyRoom}/>
 
 
       {/* just error pages */}
