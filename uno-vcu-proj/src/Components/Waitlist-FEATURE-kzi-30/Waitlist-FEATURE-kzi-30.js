@@ -13,18 +13,17 @@ class WaitList extends React.Component {
 
     signUp = () => {
         console.log("Submit button was called");
-        let data = {
-            name: document.getElementById("nameInput").value,
-            email: document.getElementById("emailInput").value,
-            phone: document.getElementById("phoneInput").value,
-            address: document.getElementById("addressInput").value,
 
-        }
         fetch('http://localhost:8000/WaitList',
         {
             method:'POST',
             headers:{'Content-type' : 'Application/json'},
-            body: JSON.stringify({data})
+            body: JSON.stringify({
+                name: document.getElementById("nameInput").value,
+                email: document.getElementById("emailInput").value,
+                phone: document.getElementById("phoneInput").value,
+                address: document.getElementById("addressInput").value
+            })
         })
         .then(response =>response.json)
         .then(data => this.setState({"data":data}))
