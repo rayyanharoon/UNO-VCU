@@ -11,9 +11,6 @@ function NavBar() {
             </button>
             <div className="collapse navbar-collapse" id="navbarNav">
                 <ul className="navbar-nav">
-                    <li className="nav-item active">
-                    <Link className="nav-link" to="/MainPage">Main Page</Link>
-                    </li>
                     <li className="nav-item">
                     <Link className="nav-link" to="/Login-kzi-30">Login</Link>
                     </li>
