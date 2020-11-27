@@ -12,13 +12,20 @@ import Register from "./Components/Registration-FEATURE-nta-52/Registration-FEAT
 import BookRooms from "./Components/BookRooms-FEATURE-rha-71/BookRooms-FEATURE-rha-71"
 import ModifyRoom from "./Components/ModifyRoom-FEATURE-kzi-30/ModifyRoom-FEATURE-kzi-30";
 import ModifyAmenity from "./Components/ModifyAmenity-FEATURE-nta-52/ModifyAmenity-FEATURE-nta-52"
-
+import WaitList from './Components/Waitlist-FEATURE-kzi-30/Waitlist-FEATURE-kzi-30';
+import AdminView from "./Components/AdminView-FEATURE-rha-71/AdminView-FEATURE-rha-71";
+import NavBar from './Components/NavBar-FEATURE-kzi-30/NavBar-FEATURE-kzi-30'
+import PageFooter from './Components/PageFooter-FEATURE-kzi-30/PageFooter-FEATURE-kzi-30'
 
 class App extends React.Component {
   render(){
   
-    return <Router>
-      <Switch>
+    return( 
+      <div className="App">
+  
+      <Router>
+        <NavBar/>
+        <Switch>
         {/* add pages here */}
       <Route exact path="/" component={MainPage}/>
       <Route exact path="/Login-kzi-30" component={Login}/>
@@ -26,12 +33,17 @@ class App extends React.Component {
       <Route exact path="/ModifyRoom-kzi-30" component={ModifyRoom}/>
       <Route exact path="/ModifyAmenity-nta-52" component={ModifyAmenity}/>
       <Route exact path="/BookRooms-rha-71" component={BookRooms}/>
+      <Route exact path="/Waitlist-kzi-30" component={WaitList}/>
+      <Route exact path="/AdminView-rha-71" component={AdminView}/>
+
 
       {/* just error pages */}
       <Route path="/404" component={NotFoundPage}/>
       {/* <Redirect to="/404"/> */}
       </Switch>
+      <PageFooter/>
     </Router>
+    </div>)
   }
 }
 

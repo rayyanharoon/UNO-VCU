@@ -9,110 +9,83 @@ class Register extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      registrationForm: [{
-        Firstname: "Isabel",
-        Lastname: "Moner",
-        Email: "isabelm@gmail.com",
-        Password: "!hello123",
-        ConfirmPassword: ""
-      },
-      {
-        Firstname: "Ant",
-        Lastname: "Nekton",
-        Email: "antInTheDeep@anorrax.com",
-        Password: "GoDeep47M",
-        ConfirmPassword: ""
-      },
-      {
-        Firstname: "Colleen",
-        Lastname: "Hoover",
-        Email: "hooverAuthor@gmail.com",
-        Password: "Author:MaybeSomeday",
-        ConfirmPassword: ""
-      }], 
-      addRegistration: {
-        Firstname: "new fname",
-        Lastname: "new lname",
-        Email: "new email",
-        Password: "new password",
-        ConfirmPassword: "new cpassword"
-      }
-    }
-
-    this.registerfname = this.registerfname.bind(this)
-    this.registerlname = this.registerlname.bind(this)
-    this.registeremail = this.registeremail.bind(this)
-    this.registerpassword = this.registerpassword.bind(this)
-    this.regconfirmpassword = this.regconfirmpassword.bind(this)
-    this.registerData = this.registerData.bind(this)
-
-  }
-
-  registerfname(e) {
-    this.setState({
-      addRegistration: {
-        ...this.state.addRegistration,
-        Firstname: e.target.value
-      }
-    })
-  }
-
-  registerlname(e) {
-    this.setState({
-      addRegistration: {
-        ...this.state.addRegistration,
-        Lastname: e.target.value
-      }
-    })
-  }
-
-  registeremail(e) {
-    this.setState({
-      addRegistration: {
-        ...this.state.addRegistration,
-        Email: e.target.value
-      }
-    })
-  }
-
-  registerpassword(e) {
-    this.setState({
-      addRegistration: {
-        ...this.state.addRegistration,
-        Password: e.target.value
-      }
-    })
-  }
-
-  regconfirmpassword(e) {
-    this.setState({
-      addRegistration: {
-        ...this.state.addRegistration,
-        ConfirmPassword: e.target.value
-      }
-    })
+    this.state = {}
   }
 
   registerData() {
     console.log(registerMsg)
   }
 
+  confirmRegistration = () => {
+    console.log("testing")
+    let registrar = {
+      firstName: document.getElementById("firstName").value,
+      lastName: document.getElementById("lastName").value,
+      email: document.getElementById("emailadd").value,
+      password: document.getElementById("password").value,
+      confirmpassword: document.getElementById("confirmPassword").value
+    }
+    fetch('http://localhost:8000/Register', {
+      method: 'POST',
+      headers: {'Content-type': 'Application/json'},
+      body: JSON.parse(registrar)
+    })
+    // .then(response =>
+    //   {
+    //     if(response.confirmPassword == true)
+    //     {
+    //       window.location='/Login'
+    //       console.log('Registered successfully!')
+    //     }
+    //     else(response.confirmpassword == false)
+    //     {
+    //       window.location='/Register'
+    //       console.log('Password does not match.')
+    //     }
+    //   })
+      .then(data => this.setState({'data': data}))
+
+  }
 
   render() {
-    return (
-      <div className='App'>
-        <h1>Welcome to the Registration</h1>
-        First Name: <input type='text' onChange={this.registerfname}/><br/>
-        Last Name: <input type='text' onChange={this.registerlname}/><br/>
-        Email: <input type='text' onChange={this.registeremail}/><br/>
-        Password: <input type='password' onChange={this.registerpassword}/><br/>
-        Confirm Password: <input type='password' onChange={this.regconfirmpassword}/><br/>
-        <button type="submit" onClick={this.registerData}>Register</button>
+    return(
+      <div className="App">
+      <form>
+        <div className="form-group col-sm-4">
+        <label for="firstname">First Name</label>
+        <input type="text" className="form-control" id="firstname"/>
+        </div>
 
-       
-      </div>
+        <div className="form-group col-sm-4">
+        <label for="lastname">Last Name</label>
+        <input type="text" className="form-control" id="lastname"/>
+        </div>
+
+        <div className="form-group col-sm-4">
+        <label for="emailadd">Email Address</label>
+        <input type="email" className="form-control" id="emailadd" aria-describedby="emailHelp"/>
+        </div>
+
+        <div className="form-group col-sm-4">
+        <label for="password">Password</label>
+        <input type="password" className="form-control" id="password"/>
+        </div>
+
+        <div className="form-group col-sm-4">
+        <label for="confirmPassword">Confirm Password</label>
+        <input type="password" className="form-control" id="confirmPassword"/>
+        </div>
+
+        <div className="form-group form-check">
+        <input type="checkbox" className="form-check-input" id="exampleCheck1"/>
+        <label className="form-check-label" for="exampleCheck1">Keep me signed in</label>
+        </div>
+      <button type="submit" className="btn btn-primary">Submit</button>
+    </form>
+    </div>
     );
   }
 }
 export default Register;
+
+

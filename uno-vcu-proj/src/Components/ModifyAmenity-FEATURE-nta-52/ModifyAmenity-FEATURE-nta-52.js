@@ -59,8 +59,6 @@ class ModifyAmenity extends Component {
             <button type="submit" onClick={this.getAmenity}>Get Room</button>
             {/* <button type="submit" onClick={this.addAmenity}>Add Amenity</button> */}
             <button type="submit" onClick={this.updateAmenity}>Update Amenity</button>
-    
-           
           </div>
         )
     }
