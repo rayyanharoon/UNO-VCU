@@ -18,12 +18,6 @@ function NavBar() {
                     <Link className="nav-link" to="/Registration-nta-52">Register</Link>
                     </li>
                     <li className="nav-item">
-                    <Link className="nav-link" to="/ModifyRoom-kzi-30">Modify Room</Link>
-                    </li>
-                    <li className="nav-item">
-                    <Link className="nav-link" to="/ModifyAmenity-nta-52">Modify Amenity</Link>
-                    </li>
-                    <li className="nav-item">
                     <Link className="nav-link" to="/WaitList-kzi-30">Waitlist Sign-up</Link>
                     </li>
                     <li className="nav-item">
