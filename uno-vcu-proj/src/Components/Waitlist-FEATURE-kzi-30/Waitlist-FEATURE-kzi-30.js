@@ -58,7 +58,7 @@ class WaitList extends React.Component {
            <div class="input-group-prepend">
                <span class="input-group-text" id="basic-addon4">Address</span>
            </div>
-           <input type="text" class="form-control" placeholder="Username" aria-label="21st Street" aria-describedby="basic-addon4"   id="addressInput"/>
+           <input type="text" class="form-control" placeholder="21st Balmoral St." aria-label="21st Street" aria-describedby="basic-addon4"   id="addressInput"/>
            </div>
            <button type="button" class="btn btn-info"onClick={this.signUp}>Submit</button>
            </div>
