@@ -27,12 +27,12 @@ class Login extends React.Component {
         {
           if(response.isAdmin == true)
           {
-            window.location="/ModifyRoom"
+            window.location="/AdminView-rha-71"
             console.log(response.isAdmin)
           }
           else if(response.status == 200 || response.isAdmin == true)
           {
-            window.location="/ModifyRoom"
+            window.location="/AdminView-rha-71"
             console.log(response.isAdmin)
 
           }
