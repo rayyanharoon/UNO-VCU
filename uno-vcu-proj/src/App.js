@@ -4,7 +4,6 @@ import './App.css';
 import { BrowserRouter as Router, Route, Switch, Link, Redirect} from "react-router-dom";
 
 //pages
-
 import MainPage from "./Components/MainPage-FEATURE-rha-71/MainPage-FEATURE-rha-71";
 import NotFoundPage from "./Components/404Page-FEATURE-kzi-30/404Page-FEATURE-kzi-30"
 import Login from "./Components/Login-FEATURE-kzi-30/Login-FEATURE-kzi-30"
@@ -16,6 +15,7 @@ import WaitList from './Components/Waitlist-FEATURE-kzi-30/Waitlist-FEATURE-kzi-
 import AdminView from "./Components/AdminView-FEATURE-rha-71/AdminView-FEATURE-rha-71";
 import NavBar from './Components/NavBar-FEATURE-kzi-30/NavBar-FEATURE-kzi-30'
 import PageFooter from './Components/PageFooter-FEATURE-kzi-30/PageFooter-FEATURE-kzi-30'
+import WaitlistView from './Components/WaitlistView-FEATURE-nta-52/WaitlistView-FEATURE-nta-52';
 
 class App extends React.Component {
   render(){
@@ -35,6 +35,7 @@ class App extends React.Component {
       <Route exact path="/BookRooms-rha-71" component={BookRooms}/>
       <Route exact path="/Waitlist-kzi-30" component={WaitList}/>
       <Route exact path="/AdminView-rha-71" component={AdminView}/>
+      <Route exact path="/WaitlistView-nta-52" component={WaitlistView}/>
 
 
       {/* just error pages */}
