@@ -58,7 +58,7 @@ class Login extends React.Component {
       <input type="password" className="w-25p-3form-control " placeholder="***********" aria-label="Password" aria-describedby="basic-addon2" id="passwordInput" />
     </div>
     </div>
-        <Link to="/Register"><button type="button">Register</button></Link>
+    <button type="submit" className="btn btn-secondary" onClick={this.verifyLogin}>Login</button>
       </div>
     )
   }
