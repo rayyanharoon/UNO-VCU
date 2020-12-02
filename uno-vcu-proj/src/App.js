@@ -16,7 +16,7 @@ import AdminView from "./Components/AdminView-FEATURE-rha-71/AdminView-FEATURE-r
 import NavBar from './Components/NavBar-FEATURE-kzi-30/NavBar-FEATURE-kzi-30'
 import PageFooter from './Components/PageFooter-FEATURE-kzi-30/PageFooter-FEATURE-kzi-30'
 import WaitlistView from './Components/WaitlistView-FEATURE-nta-52/WaitlistView-FEATURE-nta-52';
-import PaymentPage from "./Compoenets/PaymentPage-FEATURE-kzi-30/PaymentPage-FEATURE-kzi-30";
+import PaymentPage from "./Components/PaymentPage-FEATURE-kzi-30/PaymentPage-FEATURE-kzi-30";
 
 
 class App extends React.Component {
