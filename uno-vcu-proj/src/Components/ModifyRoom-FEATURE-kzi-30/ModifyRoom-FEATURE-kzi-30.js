@@ -81,36 +81,71 @@ class ModifyRoom extends React.Component {
             <div>
 
             <br/>
-            Room ID: <input type="text" id="idInput"/>            
-            <button onClick={this.deleteRoom}>Delete Room</button><br/>
+            <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Room ID Number" aria-label="roomID" aria-describedby="button-addon2" id="idInput"/>
+            <div class="input-group-append">
+            <button class="btn btn btn-danger" type="button" id="button-addon2" onClick={this.deleteRoom}>Delete</button>
+            </div>
+            </div>
 
-             Room Type: <select id="typeInput">
+            <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroupFileAddon01">Room Type:</span>
+            <select class="custom-select" id="typeInput">
+                <option selected>Choose...</option>
                 <option value="single">Single</option>
                 <option value="double">Double</option>
                 <option value="economyDouble">Economy Double</option>
             </select>
+            <div class="input-group-append">
+                <label class="input-group-text" for="inputGroupSelect02">Options</label>
+            </div>
+            </div>
+ 
             
             {/* set to read only and update on change of room type */}
-            Max Capacity: <input type="text" id="maxCapacityInput"></input>
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Max Capacity</label>
+            </div>
+            <select class="custom-select" id="maxCapacityInput">
+                <option selected>Choose...</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+            </select>
+            </div>
 
-            Occupancy Status: <select id="statusInput">
+            <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Occupancy Status</label>
+            </div>
+            <select class="custom-select" id="statusInput">
+                <option selected>Choose...</option>
                 <option value="1 spot available">1 Spot Available</option>
                 <option value="2 spots available">2 Spots Available</option>
                 <option value="occupied">Occupied</option>
                 <option value="outOfOrder">Out Of Order</option>
             </select>
-            <br/>
-            <button onClick={this.addRoom}>Add Room</button>
-            <button onClick={this.updateRoom}>Update Room</button>
-            <button onClick={this.getRooms}>Get Rooms</button>
+            </div>
 
             <br/>
-            <textarea value={JSON.stringify(this.state.data)}></textarea>
+            <button type="button" onClick={this.addRoom} class="btn btn-success">Add Room</button>
+            <button type="button" onClick={this.updateRoom} class="btn btn-primary">Update Room</button>
+            <button type="button" onClick={this.getRooms} class="btn btn-info">Get Room</button>
+
+
+            <br/>
+            <div class="input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text">Rooms:</span>
+            </div>
+            <textarea class="form-control" aria-label="With textarea" value={JSON.stringify(this.state.data)}></textarea>
+            </div>
 
 
 
             </div><br/>
-            <Link to="/MainPage"><button type="button">Go to Main</button></Link>
+          
+            <Link to="/MainPage">  <button type="button" class="btn btn-secondary">Go to Main</button></Link>
 
             </div>
             
@@ -118,5 +153,4 @@ class ModifyRoom extends React.Component {
         )
     }
 }
-
 export default ModifyRoom;
