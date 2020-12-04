@@ -16,6 +16,7 @@ import AdminView from "./Components/AdminView-FEATURE-rha-71/AdminView-FEATURE-r
 import NavBar from './Components/NavBar-FEATURE-kzi-30/NavBar-FEATURE-kzi-30'
 import PageFooter from './Components/PageFooter-FEATURE-kzi-30/PageFooter-FEATURE-kzi-30'
 import WaitlistView from './Components/WaitlistView-FEATURE-nta-52/WaitlistView-FEATURE-nta-52';
+import InfoPage from './Components/InfoPage-FEATURE-rha-71/InfoPage-FEATURE-rha-71';
 
 class App extends React.Component {
   render(){
@@ -36,7 +37,7 @@ class App extends React.Component {
       <Route exact path="/Waitlist-kzi-30" component={WaitList}/>
       <Route exact path="/AdminView-rha-71" component={AdminView}/>
       <Route exact path="/WaitlistView-nta-52" component={WaitlistView}/>
-
+      <Route exact path="/InfoPage-rha-71" component={InfoPage}/>
 
       {/* just error pages */}
       <Route path="/404" component={NotFoundPage}/>
