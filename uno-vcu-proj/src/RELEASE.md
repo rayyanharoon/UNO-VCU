@@ -6,3 +6,5 @@
 - Admin specific access to modify features
 - Waitlist 'useEffect' was successful
     (but unable to view the database in browser)
+
+### 0.4 Release
